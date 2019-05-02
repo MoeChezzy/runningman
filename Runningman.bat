@@ -2,22 +2,8 @@
 Echo off
 cls
 color f
-set productname=Runningman *
+set productname=Runningman
 set productauthor=Chezzy
-
-cd %localappdata%
-if not exist %productname% goto MKDIR
-if exist %productname% set gamepath=%localappdata%\%productname%
-cd %gamepath%
-if exist %productname% goto MENU
-
-:MKDIR
-mkdir %localappdata%\%productname%
-cd %localappdata%\%productname%
-set gamepath=%localappdata%\%productname%
-cd %gamepath%
->hiscore.sve echo 0
-goto MENU
 
 :MENU
 cls
